@@ -1,0 +1,22 @@
+{
+  "name": "gulp-build",
+  "version": "1.0.0",
+  "description": "### gulp-build是一个基于gulp的前端工程构建工具。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeasonSun/gulp-build.git"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "jeason",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JeasonSun/gulp-build/issues"
+  },
+  "homepage": "https://github.com/JeasonSun/gulp-build#readme"
+}
