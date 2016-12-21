@@ -5,6 +5,7 @@
 var gulp = require("gulp");
 var colors = require("colors");  //让终端输出有颜色
 var gulpSequence = require('gulp-sequence');
+var del = require('del');
 
 /**
  * 任务清单
@@ -25,12 +26,13 @@ gulp.task('default',['dev']);
  */
 
 gulp.task('dev',gulpSequence(
-  // 'delDev',
+  'delDev',
   [
     'styles',
     'images',
     'compileHtml',
+    'compileJs'
     // 'copySlice',
-
-  ]
+  ],
+  'rev'
 ));

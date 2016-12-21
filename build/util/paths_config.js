@@ -4,7 +4,7 @@ var expPath = function(root){
           dir: './src',
           img: root+'/src/img/**/*.{JPG,jpg,png,gif,svg}',
           slice: './src/slice/**/*.png',
-          js: './src/js/**/*.js',
+          js: root+'/src/js/**/*.js',
           media: './src/media/**/*',
           less: './src/css/style-*.less',
           sass: root+'/src/styles/**/*.{css,scss}',

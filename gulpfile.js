@@ -1,1 +1,1 @@
-var gulpTasks = require("./@gulp_build");
+var gulpTasks = require("./build");

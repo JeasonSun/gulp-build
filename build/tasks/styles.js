@@ -6,6 +6,10 @@ var postcssAutoprefixer = require('autoprefixer');
 var sass = require('gulp-sass');
 var concat = require("gulp-concat");
 var sourcemaps = require("gulp-sourcemaps");
+var rename = require('gulp-rename');
+var rev = require("gulp-rev");
+var revCollector = require("gulp-rev-collector");
+
 
 var postcssOption = [];
 
@@ -31,6 +35,15 @@ gulp.task("styles",function(){
             .on("error",sass.logError)
             .pipe(postcss(postcssOption))
             .pipe(sourcemaps.write('./.maps/'))
-            .pipe(gulp.dest(conf.paths.dev.css));
+            .pipe(rev())
+            .pipe(rename(function(file){
+              if(file.extname == '.css'){
+                file.basename += '.min';
+                file.extname = ".css";
+              }
+            }))
+            .pipe(gulp.dest(conf.paths.dev.css))
+            .pipe(rev.manifest())
+            .pipe(gulp.dest(conf.paths.dev.dir+'/rev/styles'));
 
 });
